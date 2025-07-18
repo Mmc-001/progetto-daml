@@ -1,2 +1,4 @@
 augmented_data/
 *.h5
+__pycache__/
+*.pyc
