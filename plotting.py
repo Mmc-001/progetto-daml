@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.metrics import auc, confusion_matrix, roc_curve
 
 
-def plot_confusion_matrix(y_true, y_pred, classes=None, normalize=False, title=None, cmap=plt.cm.Blues):
+def plot_confusion_matrix(y_true, y_pred, classes=None, normalize=False, title=None, cmap=plt.cm.Blues, figsize=None):
     """
     From scikit-learn: plots a confusion matrix.
     Normalization can be applied by setting `normalize=True`.
@@ -24,7 +24,11 @@ def plot_confusion_matrix(y_true, y_pred, classes=None, normalize=False, title=N
     if normalize:
         cm = cm.astype("float") / cm.sum(axis=1)[:, np.newaxis]
 
-    fig, ax = plt.subplots()
+    # Automatically set figure size if not provided
+    if figsize is None and classes is not None:
+        n = len(classes)
+        figsize = (max(8, n * 0.5), max(6, n * 0.5))  # scale with number of classes
+    fig, ax = plt.subplots(figsize=figsize)
     im = ax.imshow(cm, interpolation="nearest", cmap=cmap, origin="lower")
     cbar = ax.figure.colorbar(im, ax=ax)
     cbar.set_label(title)
@@ -38,7 +42,7 @@ def plot_confusion_matrix(y_true, y_pred, classes=None, normalize=False, title=N
 
     if classes is not None:
         tick_marks = np.arange(len(classes))
-        plt.xticks(tick_marks, classes, rotation=45)
+        plt.xticks(tick_marks, classes, rotation=90)
         plt.yticks(tick_marks, classes)
 
     # Loop over data dimensions and create text annotations.
@@ -64,7 +68,9 @@ def plot_roc(fpr, tpr, auc, labels, linestyle, legend=True):
     plt.ylim(0.001, 1)
     plt.grid(True)
     if legend:
-        plt.legend(loc="upper left")
+        # Place legend outside the plot and use a smaller font
+        plt.legend(loc="best", bbox_to_anchor=(1.0, 0.5), fontsize="x-small", frameon=False)
+    plt.tight_layout(rect=[0, 0, 0.85, 1])  # Make room for legend, plot takes spotlight
 
 
 def roc_data(y, predict_test, labels):
