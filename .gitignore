@@ -1,3 +1,4 @@
 augmented_data/
 __pycache__/
+local/
 *.pyc
