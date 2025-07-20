@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 augmented_data/
 *.h5
+local/
