@@ -12,7 +12,7 @@ import tensorflow as tf
 def preprocess(image, label, dataset_info, image_size=(128, 128)):
     image = tf.image.resize(image, image_size)
     image = tf.cast(image, tf.float32) / 255.0
-    return image, tf.one_hot(label, dataset_info.features['label'].num_classes)
+    return image, label
 
 # def preprocess_with_aug(image, label, dataset_info, image_size=(128, 128), data_aug=None):
     # image = tf.image.resize(image, image_size)
@@ -20,3 +20,4 @@ def preprocess(image, label, dataset_info, image_size=(128, 128)):
         # image = data_aug(image)  # <-- augment here
     # image = tf.cast(image, tf.float32) / 255.0
     # return image, tf.one_hot(label, dataset_info.features['label'].num_classes)
+   
