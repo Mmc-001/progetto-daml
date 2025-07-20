@@ -144,7 +144,7 @@ def plot_image_array(
     ax[nrows - 1][int(ncols / 2)].set_xlabel("$x$")
 
 
-def plot_model_history(history):
+def plot_model_history(history, title=None):
     """Plot the training and validation history for a TensorFlow network"""
 
     # Extract loss and accuracy
@@ -153,6 +153,10 @@ def plot_model_history(history):
     acc = history.history["accuracy"]
     val_acc = history.history["val_accuracy"]
     n_epochs = len(loss)
+
+    if title is None:
+        title = "Training History"
+    plt.suptitle(title)
 
     fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(10, 5))
     ax[0].plot(np.arange(n_epochs), loss, label="Training")
