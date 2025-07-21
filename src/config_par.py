@@ -6,7 +6,7 @@ BATCH_SIZE          = [64,
                        64,
                        64,
                        64,]
-N_EPOCHS            = [30,
+N_EPOCHS            = [50,
                        50,
                        30,
                        30,
@@ -36,6 +36,3 @@ REDUCE_LR_PATIENCE = [2,
                       2,
                       2,
                       2]
-TRAIN               = True # Change to False to only visualize an already trained model's history
-
-ARCH_CHOICE        = 0 # Choose the architecture version
