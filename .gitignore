@@ -2,3 +2,4 @@ augmented_data/
 __pycache__/
 local/
 *.pyc
+.DS_Store
