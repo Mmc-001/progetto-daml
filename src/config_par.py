@@ -1,7 +1,7 @@
 # useful constants for each architecture
 # to be used in the model_training.ipynb notebook
 IMG_SIZE            = (128, 128) # Image size for resizing
-BATCH_SIZE          = [0,
+BATCH_SIZE          = [64,
                        64,
                        64,
                        64,
