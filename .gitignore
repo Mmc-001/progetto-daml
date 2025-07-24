@@ -3,3 +3,4 @@ __pycache__/
 local/
 *.pyc
 .DS_Store
+.tmp.driveupload
