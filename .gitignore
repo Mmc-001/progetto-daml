@@ -3,3 +3,5 @@ __pycache__/
 augmented_data/
 local/
 .tmp.driveupload
+.tmp.drivedownload
+.DS_Store
