@@ -1,6 +1,7 @@
-augmented_data/
 __pycache__/
-local/
 *.pyc
-.DS_Store
+augmented_data/
+local/
 .tmp.driveupload
+.tmp.drivedownload
+.DS_Store
