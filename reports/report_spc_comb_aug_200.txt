@@ -1,0 +1,20 @@
+              precision    recall  f1-score   support
+
+       Apple       0.56      0.80      0.66       155
+   Blueberry       0.81      0.84      0.83        68
+      Cherry       0.83      0.77      0.80        98
+        Corn       0.93      0.93      0.93       193
+       Grape       0.84      0.94      0.89       189
+      Orange       0.90      0.94      0.92       276
+       Peach       0.75      0.79      0.77       124
+      Pepper       0.70      0.64      0.67       121
+      Potato       0.58      0.72      0.64       118
+   Raspberry       0.68      1.00      0.81        17
+     Soybean       0.95      0.79      0.87       253
+      Squash       0.95      0.82      0.88        93
+  Strawberry       0.91      0.73      0.81        67
+      Tomato       0.88      0.82      0.85       943
+
+    accuracy                           0.83      2715
+   macro avg       0.80      0.82      0.81      2715
+weighted avg       0.84      0.83      0.83      2715
