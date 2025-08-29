@@ -22,4 +22,4 @@ Una volta individuato il metodo migliore, si valuta la performance del modello b
 Si è inoltre valutato come la scelta del numero ('t') di elementi all'interno delle classi incidesse sulla performance del modello comparando i risultati ottenuti con:
 - 't' pari al numero di elementi nella classe più grande (i file ad essa riferiti sono segnalati dalla sigla '4399')
 - 't' pari alla media matematica calcolata a partire da tutti i numeri di elemntenti (i file ad essa riferiti sono segnalati dalla sigla '1143')
-- 't' pari al numero di elementi nella classe più piccola (i file ad essa riferiti sono segnalati dalla sigla '122').
+- 't' pari al numero di elementi per classe usato nella valutazione delle quattro strategie differenti (i file ad essa riferiti sono segnalati dalla sigla '200').
